@@ -1,4 +1,15 @@
-# Player
+# SoyuzRP Database Structure
+
+This document is a draft, proposal or work-in-progress. It is likely to be 
+subject to rapid and drastic changes.
+
+Revision #1, 2017-01-16
+
+Author: Alastair Campbell <alastair.campbell@runbox.no>
+
+https://github.com/abc/SoyuzRP/design/database.md
+
+## Player
 
 Players make the game go 'round, and so they're at the top of our database.
 
@@ -9,7 +20,7 @@ Players make the game go 'round, and so they're at the top of our database.
 
 * TODO: Potentially add administrative rights to this table
 
-# Character
+## Character
 
 With SoyuzRP, it's possible for a single player to have multiple characters.
 
@@ -20,7 +31,7 @@ With SoyuzRP, it's possible for a single player to have multiple characters.
 | name | string | Jacob Wright |
 | occupation_id | int | 23 |
 
-# Occupation
+## Occupation
 
 Most characters have jobs. Some are unemployed, or part of a criminal group.
 
@@ -32,7 +43,7 @@ Most characters have jobs. Some are unemployed, or part of a criminal group.
 
 * TODO: Consider flags/organisations for API access.
 
-# Item
+## Item
 
 Characters may have some number of items, such as personal effects or weapons.
 
@@ -46,7 +57,7 @@ Characters may have some number of items, such as personal effects or weapons.
 your plugin, like coolguns_colt1911, for a Colt 1911 item added by the "Cool 
 Guns" plugin, for example.
 
-# Shop
+## Shop
 
 NPC-owned shops are an important cash sink for the Soyuz economy. 
 
@@ -61,7 +72,7 @@ NPC-owned shops are an important cash sink for the Soyuz economy.
 
 * TODO: Investigate how models/NPCs could be implemented technically.
 
-# Door
+## Door
 
 Characters and organisations have doors which they need to lock and unlock. 
 
@@ -74,7 +85,7 @@ Characters and organisations have doors which they need to lock and unlock.
 * TODO: Look into how doors work internally - are they entity IDs like I 
 	expect them to be, or are they a little different in Source?
 
-# Property
+## Property
 
 Properties are, essentially, a collection of doors grouped as a cohesive unit.
 
