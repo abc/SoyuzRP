@@ -106,21 +106,6 @@ Characters may have some number of items, such as personal effects or weapons.
 your plugin, like coolguns.colt1911, for a Colt 1911 item added by the "Cool 
 Guns" plugin, for example.
 
-## shop
-
-NPC-owned shops are an important cash sink for the Soyuz economy. 
-
-| Name | Type | Sample |
-| ---- | ---- | ------ |
-| id | int | 40 |
-| display_name | string | Downtown Guns n Ammo |
-| position_x | double | 495.21 |
-| position_y | double | -112.60 |
-| position_z | double | 50.32 |
-| display_model | string | citizen02.mdl |
-
-* TODO: Investigate how models/NPCs could be implemented technically.
-
 ## door
 
 Characters and organisations have doors which they need to lock and unlock. 
@@ -133,6 +118,8 @@ Characters and organisations have doors which they need to lock and unlock.
 
 * TODO: Look into how doors work internally - are they entity IDs like I 
 	expect them to be, or are they a little different in Source?
+
+* TODO: Does door need to be an entity type?
 
 ## property
 
