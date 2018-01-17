@@ -1,15 +1,18 @@
 # SoyuzRP Database Structure
 
+(SoyuzRP Documentation Index)[https://abc.github.io/SoyuzRP]
+
 This document is a draft, proposal or work-in-progress. It is likely to be 
-subject to rapid and drastic changes.
+subject to rapid and drastic changes. 
 
-Revision #1, 2017-01-16
+**Entity Tables**
 
-Author: Alastair Campbell <alastair.campbell@runbox.no>
+If a database table is enabled as an entity, then additional data can be stored 
+about the entity in the "data" table for that type. For example, you could 
+store details about donator status in the player_data table, because players 
+are marked as entity types.
 
-https://github.com/abc/SoyuzRP/design/database.md
-
-## Player
+## player
 
 Players make the game go 'round, and so they're at the top of our database.
 
@@ -18,9 +21,21 @@ Players make the game go 'round, and so they're at the top of our database.
 | id | int | 06 |
 | steam_id | string | STEAM_0:1:8422618 |
 
+### player_data
+
+| Name | Type | Sample |
+| ---- | ---- | ------ |
+| id | int | 95 |
+| player_id | int | 06 |
+| data_key | string | "soyuzcore.donator_level" |
+| data_value | string | "VIP" |
+
+
+* Players are entity types.
 * TODO: Potentially add administrative rights to this table
 
-## Character
+
+## character
 
 With SoyuzRP, it's possible for a single player to have multiple characters.
 
@@ -31,7 +46,18 @@ With SoyuzRP, it's possible for a single player to have multiple characters.
 | name | string | Jacob Wright |
 | occupation_id | int | 23 |
 
-## Occupation
+### character_data
+
+| Name | Type | Sample |
+| ---- | ---- | ------ |
+| id | int | 95 |
+| character_id | int | 19 |
+| data_key | string | "soyuzcore.age" |
+| data_value | string | "23" |
+
+* Characters are entity types.
+
+## occupation
 
 Most characters have jobs. Some are unemployed, or part of a criminal group.
 
@@ -41,23 +67,46 @@ Most characters have jobs. Some are unemployed, or part of a criminal group.
 | title | string | Police Detective |
 | pay | int | 250 |
 
-* TODO: Consider flags/organisations for API access.
+### occupation_data
 
-## Item
+| Name | Type | Sample |
+| ---- | ---- | ------ |
+| id | int | 95 |
+| occupation_id | int | 23 |
+| data_key | string | "soyuzcore.scoreboard_color" |
+| data_value | string | "#0000ff" |
+
+* Occupations are entity types.
+
+## item
 
 Characters may have some number of items, such as personal effects or weapons.
 
 | Name | Type | Sample |
 | ---- | ---- | ------ |
 | id | int | 35 |
-| internal_name | string | soyuzcore_atmcard |
+| internal_name | string | soyuzcore.atmcard |
 | display_name | string | ATM Card |
+| on_use | string | soyuz_useatm |
+
+### item_data
+
+| Name | Type | Sample |
+| ---- | ---- | ------ |
+| id | int | 95 |
+| item_id | int | 35 |
+| data_key | string | "soyuzcore.drops_when_killed" |
+| data_value | string | "true" |
+
+* Items are entity types.
+
+* The `on_use` field is used to run a command when the item is used.
 
 * An internal name must be unique. We suggest using a common namespace for 
-your plugin, like coolguns_colt1911, for a Colt 1911 item added by the "Cool 
+your plugin, like coolguns.colt1911, for a Colt 1911 item added by the "Cool 
 Guns" plugin, for example.
 
-## Shop
+## shop
 
 NPC-owned shops are an important cash sink for the Soyuz economy. 
 
@@ -72,7 +121,7 @@ NPC-owned shops are an important cash sink for the Soyuz economy.
 
 * TODO: Investigate how models/NPCs could be implemented technically.
 
-## Door
+## door
 
 Characters and organisations have doors which they need to lock and unlock. 
 
@@ -85,7 +134,7 @@ Characters and organisations have doors which they need to lock and unlock.
 * TODO: Look into how doors work internally - are they entity IDs like I 
 	expect them to be, or are they a little different in Source?
 
-## Property
+## property
 
 Properties are, essentially, a collection of doors grouped as a cohesive unit.
 
@@ -96,3 +145,15 @@ A door can not be part of two properties at the same time.
 | id | int | 62 |
 | owner_id | int | 19 |
 | display_name | string | Police Department |
+
+### property_data
+
+| Name | Type | Sample |
+| ---- | ---- | ------ |
+| id | int | 95 |
+| property_id | int | 62 |
+| data_key | string | "soyuzcore.occupation_flags" |
+| data_value | string | "soyuzcore.is_police" |
+
+
+* Properties are entity types.
