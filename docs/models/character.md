@@ -1,5 +1,7 @@
 # Character
 
+[SoyuzRP Documentation - Models](https://abc.github.io/SoyuzRP/models)
+
 A character is the centerpiece of the SoyuzRP system. Most other entities are 
 connected to a character in some way, either through ownership or membership.
 

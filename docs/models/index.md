@@ -1,5 +1,7 @@
 # SoyuzRP Documentation - Models
 
+[SoyuzRP Documentation - Index](https://abc.github.io/SoyuzRP)
+
 These documents describe and define the models used by the SoyuzRP system.
 
 * [Player](https://abc.github.io/SoyuzRP/models/player)

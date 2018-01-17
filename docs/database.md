@@ -1,6 +1,6 @@
-# SoyuzRP Database Structure
+# SoyuzRP Documentation - Database Structure
 
-(SoyuzRP Documentation Index)[https://abc.github.io/SoyuzRP]
+[SoyuzRP Documentation - Index](https://abc.github.io/SoyuzRP)
 
 This document is a draft, proposal or work-in-progress. It is likely to be 
 subject to rapid and drastic changes. 
