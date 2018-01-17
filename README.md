@@ -53,7 +53,7 @@ but who knows what the future holds.
 
 **Alastair Blake 'Chartax' Campbell**
 
-: I am a software developer from Scotland, in the UK. I've been roleplaying 
+    I am a software developer from Scotland, in the UK. I've been roleplaying 
 for over ten years, starting in Neverwinter Nights but mostly playing the 
 Specialists Roleplay. I have been a big fan of Garry's Mod since version 6, 
 back in around 2005 or so. I created this project because I was disappointed 
@@ -72,7 +72,7 @@ http://steamcommunity.com/id/chartaxx
 
 **What is this project?**
 
-: SoyuzRP is a suite of Lua plugins for Garry's Mod to enable good, 
+    SoyuzRP is a suite of Lua plugins for Garry's Mod to enable good, 
 high-quality roleplaying servers to reach their full potential without 
 needing their own coder or technical skill. The hope is that SoyuzRP will 
 encourage server owners to implement a higher quality of roleplay, the likes 
@@ -80,7 +80,7 @@ of which are not often seen in Garry's Mod.
 
 **What do you mean by *higher quality* of roleplay?**
 
-: Most servers which claim to be "roleplay" are a far cry away from what 
+    Most servers which claim to be "roleplay" are a far cry away from what 
 things used to be like in the height of The Specialists Roleplaying. It seems 
 that the definition of roleplay has been redefined into maximizing the amount 
 of cash, guns and property owned. Killing others in the street for no real 
@@ -89,7 +89,7 @@ announce that you have accepted a hit are encouraged, and commonplace.
 
 **How will a plugin suite encourage better roleplay?**
 
-: SoyuzRP is written with the intention that jobs are a little more permenent 
+    SoyuzRP is written with the intention that jobs are a little more permenent 
 than they are in, say, DarkRP. People don't hold a vote to become a police 
 officer, or a criminal, and so on. Each individual who wishes to hold an 
 important position within the city has to go through an applications process, 
@@ -99,6 +99,6 @@ the server. Assuming they don't get fired for abusing their position, that is.
 
 **Why *Soyuz* RP?**
 
-: SoyuzRP is inspired by those that came before it, such as HWRP, but most 
+    SoyuzRP is inspired by those that came before it, such as HWRP, but most 
 notably, ApolloRP which was written by the extremely talented Hawk552. SoyuzRP 
 would do very well to emulate ApolloRP, and it is the best we can hope for.
