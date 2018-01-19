@@ -144,3 +144,19 @@ A door can not be part of two properties at the same time.
 
 
 * Properties are entity types.
+
+## audit_history
+
+All database interactions should be tracked in this table for troubleshooting.
+
+| Name | Type | Sample |
+| ---- | ---- | ------ |
+| id | int | 32 |
+| target_type | string | character |
+| target_fields | string | occupation_id |
+| new_value | string | 23 |
+| updated_id | int | 19 |
+| updated_by | int | 06 |
+| detail | string | 
+| source | string | soyuzcore |
+| date_updated | datetime | 2017-01-01 05:23:14 |
